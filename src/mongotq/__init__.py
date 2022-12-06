@@ -1,4 +1,6 @@
-from mongotq import anomalies
-from mongotq.interface import *
-from mongotq.task import *
-from mongotq.task_queue import *
+from .anomalies import *
+from .interface import *
+from .task import *
+from .task_queue import *
+
+__version__ = '0.1.0'
