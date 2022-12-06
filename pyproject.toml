@@ -1,0 +1,27 @@
+[build-system]
+requires = ['setuptools>=61.0.0', 'wheel']
+build-backend = 'setuptools.build_meta'
+
+[project]
+name = 'mongo-taskqueue'
+version = '0.1.0'
+description = 'Queueing data structure on top of a MongoDB collection'
+readme = 'README.md'
+license = { text = 'MIT' }
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development",
+]
+keywords = ['mongo', 'mongodb', 'queue', 'task', 'taskqueue']
+dependencies = [
+    'pymongo',
+    'bson',
+    'pandas',
+]
+requires-python = '>=3.8'
+
+[project.urls]
+Homepage = 'https://github.com/mms-analytics/mongo-taskqueue'
