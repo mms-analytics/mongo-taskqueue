@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source mtq/bin/activate
+source .venv/bin/activate
 
 rm dist/*
 python -m build
