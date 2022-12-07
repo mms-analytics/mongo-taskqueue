@@ -8,4 +8,3 @@ build/
 src/mongo_taskqueue.egg-info/
 
 .DS_Store
-
