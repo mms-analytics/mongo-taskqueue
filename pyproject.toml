@@ -8,6 +8,10 @@ version = '0.1.0'
 description = 'Queueing data structure on top of a MongoDB collection'
 readme = 'README.md'
 license = { text = 'MIT' }
+maintainers = [
+    { name = 'Shayan Amani', email = 'me@shayanamani.com' }
+]
+keywords = ['mongo', 'mongodb', 'queue', 'task', 'taskqueue']
 classifiers = [
     "License :: OSI Approved :: MIT License",
     "Programming Language :: Python",
@@ -15,7 +19,6 @@ classifiers = [
     "Intended Audience :: Developers",
     "Topic :: Software Development",
 ]
-keywords = ['mongo', 'mongodb', 'queue', 'task', 'taskqueue']
 dependencies = [
     'pymongo',
     'bson',
