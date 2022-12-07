@@ -1,4 +1,11 @@
 __pycache__/
-venv
-.idea
+.venv/
+
+.idea/
+
+dist/
+build/
+src/mongo_taskqueue.egg-info/
+
 .DS_Store
+
