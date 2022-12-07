@@ -3,7 +3,7 @@ import pprint
 from collections.abc import MutableMapping
 from typing import Iterator, Any
 
-import bson
+from bson.objectid import ObjectId
 
 STATUS_NEW = 'new'
 STATUS_PENDING = 'pending'
@@ -20,7 +20,7 @@ class Task(MutableMapping):
     """
 
     def __init__(self,
-                 _id: bson.objectid.ObjectId = None,
+                 _id: ObjectId = None,
                  assignedTo: str = None,
                  createdAt: float = None,
                  modifiedAt: float = None,
@@ -47,7 +47,7 @@ class Task(MutableMapping):
                         with the Task
         """
         datetime_now = datetime.datetime.now()
-        self._id = _id or bson.objectid.ObjectId()
+        self._id = _id or ObjectId()
         self.assignedTo = assignedTo
         self.createdAt = createdAt or datetime_now.timestamp()
         self.modifiedAt = modifiedAt or datetime_now.timestamp()

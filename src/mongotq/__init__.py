@@ -3,4 +3,4 @@ from .interface import *
 from .task import *
 from .task_queue import *
 
-__version__ = '0.1.4'
+__version__ = '0.1.5'
