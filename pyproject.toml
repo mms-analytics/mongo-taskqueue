@@ -4,12 +4,12 @@ build-backend = 'setuptools.build_meta'
 
 [project]
 name = 'mongo-taskqueue'
-version = '0.2.2'
+version = '0.2.3'
 description = 'Queueing data structure on top of a MongoDB collection'
 readme = 'README.md'
 license = { text = 'MIT' }
 maintainers = [
-    { name = 'Shayan Amani', email = 'me@shayanamani.com' }
+    { name = 'Shayan Amani', email = 'shayan@talonhealthtech.com' }
 ]
 keywords = ['mongo', 'mongodb', 'queue', 'task', 'taskqueue']
 classifiers = [
