@@ -28,7 +28,7 @@ Then you can simply check the tail of your queue:
 ```python
 >>> task_queue.tail(n=5)
 ```
-```
+```python
 {'_id': ObjectId('6392375588c63227371c693c'),
  'assignedTo': None,
  'createdAt': datetime.datetime(2022, 12, 8, 14, 13, 25, 99685),
@@ -81,6 +81,6 @@ Then you can simply check the tail of your queue:
 ## Installation
 The only dependency is [pyMongo](https://pymongo.readthedocs.io/en/stable/).
 The easiest way to install Mongo-TaskQueue is using `pip`:
-```
+```bash
 $ pip install mongo-taskqueue
 ```
