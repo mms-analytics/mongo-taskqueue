@@ -6,7 +6,6 @@ from functools import cached_property
 from pprint import pprint
 from typing import Any, Union, List, Dict, Iterable, Generator
 
-import pandas
 from pymongo import MongoClient, ASCENDING, DESCENDING
 from pymongo.collection import Collection, ReturnDocument
 from pymongo.database import Database
@@ -390,8 +389,14 @@ class TaskQueue:
 
         :return: the DataFrame of Tasks
         """
-        tasks = self.to_list()
-        return pandas.DataFrame(tasks)
+        df = None
+        try:
+            import pandas
+            tasks = self.to_list()
+            df = pandas.DataFrame(tasks)
+        except ImportError:
+            logging.warning('pandas needs to be installed!')
+        return df
 
     # Task lifecycle
     def on_success(self, task: Task) -> None:

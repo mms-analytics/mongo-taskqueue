@@ -4,7 +4,7 @@ build-backend = 'setuptools.build_meta'
 
 [project]
 name = 'mongo-taskqueue'
-version = '0.1.6'
+version = '0.1.7'
 description = 'Queueing data structure on top of a MongoDB collection'
 readme = 'README.md'
 license = { text = 'MIT' }
@@ -21,7 +21,6 @@ classifiers = [
 ]
 dependencies = [
     'pymongo',
-    'pandas',
 ]
 requires-python = '>=3.8'
 
