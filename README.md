@@ -81,6 +81,6 @@ Then you can simply check the tail of your queue:
 ## Installation
 The only dependency is [pyMongo](https://pymongo.readthedocs.io/en/stable/).
 The easiest way to install Mongo-TaskQueue is using `pip`:
-```bash
-$ pip install mongo-taskqueue
+```shell
+pip install mongo-taskqueue
 ```
