@@ -11,10 +11,22 @@ from pymongo.collection import Collection, ReturnDocument
 from pymongo.database import Database
 from pymongo.results import InvalidOperation
 
-from .anomalies import NonPendingAssignedAnomaly
-from .interface import get_mongo_client
-from .task import (Task, STATUS_NEW, STATUS_PENDING,
-                   STATUS_FAILED, STATUS_SUCCESSFUL)
+from mongotq.anomalies import NonPendingAssignedAnomaly
+from mongotq.task  import Task, STATUS_NEW, STATUS_PENDING, \
+                   STATUS_FAILED, STATUS_SUCCESSFUL
+
+
+def get_mongo_client(mongo_host: Union[str, List[str]]) -> MongoClient:
+    """
+    Returns a MongoDB client instance.
+
+    :param mongo_host: MongoDB instance hostname or a qualified URI.
+                       Multiple hosts can be provided as a list.
+    :return: the MongoDB client instance
+    """
+    return MongoClient(host=mongo_host,
+                       tlsAllowInvalidCertificates=True,
+                       readPreference='secondaryPreferred')
 
 
 class TaskQueue:
