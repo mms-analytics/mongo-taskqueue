@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 from typing import Dict
 
-from .task import STATUS_PENDING, STATUS_FAILED
+from mongotq.task import STATUS_PENDING, STATUS_FAILED
 
 
 class BaseAnomaly(ABC):
